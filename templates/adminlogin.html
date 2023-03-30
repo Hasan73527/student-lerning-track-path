@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn - Free Educational Responsive Web Template </title>
+    <link rel="favicon" href="{{ url_for('static', filename='assets/images/favicon.png')}}">
+    <link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/font-awesome.min.css')}}">
+    <!-- Custom styles for our template -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/bootstrap-theme.css')}}" media="screen">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/style.css')}}">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+	<script src="assets/js/html5shiv.js"></script>
+	<script src="assets/js/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+    <div class="navbar navbar-inverse">
+        <div class="container">
+            <div class="navbar-header">
+                <!-- Button for smallest screens -->
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+                <a class="navbar-brand" href="/">
+                    <img src="{{ url_for('static', filename='assets/images/logo.png')}}" alt="Techro HTML5 template"></a>
+            </div>
+          </div>
+          <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav pull-right mainNav">
+              <li class="active"><a href="/">Home</a></li> 	
+              <li><a href="/userreg">registration</a></li>
+              <li><a href="/userlogin">Login</a></li>
+              <li><a href="/adminlogin">Admin</a></li>
+              <li><a href="/searchuser">SEARCH</a></li>
+              <li><a href="/courses">Courses</a></li>
+              <li><a href="/contact">Contact</a></li>
+              <li><a href="/about">About</a></li>
+    
+            </ul>
+          </div>
+			</div>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </div>
+    <!-- /.navbar -->
+
+    <header id="head" class="secondary">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8">
+                    <center>
+                    <h1>ADMIN</h1>
+                </center>
+                </div>
+            </div>
+        </div>
+    </header>
+    <br />
+    <br />
+    <div class="row">
+      <div class="col-md-6 col-sm-8 mx-auto">
+        <div class="card">
+          <div class="card-body" style="background-color: #eeefff">
+            <div class="mt-2 text-center">
+              <h3 style="color: brown;">ADMIN LOGIN</h3>
+            </div>
+
+            <div align="center">
+              <h5 style="color:red"> {{ msg }} </h5>
+            </div>
+            <form action="/adminlogin" method="POST">
+              <div class="form-group">
+                <label for="email" class="fw-bold text-danger">ADMIN USER ID *</label>
+                <input type="teaxt" name="adminuserid" class="form-control" placeholder="Enter Id">
+              </div>
+
+              <br />
+
+              <div class="form-group">
+                <label for="password" class="fw-bold text-danger">ADMIN PASSWORD</label>
+                <input type="password" name="adminpassword" autocomplete="off" class="form-control" placeholder="Enter Password">
+              </div>
+              <br />
+              <input type="submit" class="btn btn-danger btn-block" value="LOGIN">
+            </form>
+          </div> <!-- Card Body End -->
+        </div> <!-- Card End -->
+      </div> <!-- Col alignment end -->
+    </div> <!-- Row End -->
+  </div> <!-- Container End -->
+
+</body>
+
+</html>

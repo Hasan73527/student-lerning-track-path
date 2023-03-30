@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Student Learning Path </title>
+	<link rel="favicon" href="{{ url_for('static', filename='assets/images/favicon.png')}}">
+	<link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+	<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/bootstrap.min.css')}}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/font-awesome.min.css')}}">
+	<!-- Custom styles for our template -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/bootstrap-theme.css')}}" media="screen">
+	<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/style.css')}}">
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+	<script src="assets/js/html5shiv.js"></script>
+	<script src="assets/js/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+	<!-- Fixed navbar -->
+	<div class="navbar navbar-inverse">
+		<div class="container">
+			<div class="navbar-header">
+				<!-- Button for smallest screens -->
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+				<a class="navbar-brand" href="/">
+					<img src="{{ url_for('static', filename='assets/images/logo.png')}}" alt="Techro HTML5 template"></a>
+			</div>
+		</div>
+		<div class="navbar-collapse collapse">
+			<ul class="nav navbar-nav pull-right mainNav">
+				<li class="active"><a href="/">Home</a></li> 	
+				<li><a href="/userreg">registration</a></li>
+				<li><a href="/userlogin">Login</a></li>
+				<li><a href="/adminlogin">Admin</a></li>
+				<li><a href="/courses">Courses</a></li>
+				<li><a href="/contact">Contact</a></li>
+				<li><a href="/about">About</a></li>
+
+			</ul>
+		</div>
+			<!--/.nav-collapse -->
+		</div>
+	</div>
+	<!-- /.navbar -->
+
+	<header id="head" class="secondary">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-8">
+					<h1>Contact us</h1>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<!-- container -->
+	<div class="container">
+				<div class="row">
+					<div class="col-md-6">
+						<h3 class="section-title">Your Message</h3>
+													<!--NOTE: Update your email Id in "contact_me.php" file in order to receive emails from your contact form-->
+		<form name="sentMessage" id="contactForm"  novalidate> 
+		<div class="control-group">
+		<div class="controls">
+		<input type="text" class="form-control" 
+		placeholder="Full Name" id="name" required
+		data-validation-required-message="Please enter your name" />
+		<p class="help-block"></p>
+		</div>
+		</div> 	
+		<div class="control-group">
+		<div class="controls">
+		<input type="email" class="form-control" placeholder="Email" 
+		id="email" required
+		data-validation-required-message="Please enter your email" />
+		</div>
+		</div> 	
+
+		<div class="control-group">
+		<div class="controls">
+		<textarea rows="5" cols="60" class="form-control" 
+		placeholder="Message" id="message" required
+		data-validation-required-message="Please enter your message" minlength="5" 
+		data-validation-minlength-message="Min 5 characters" 
+		maxlength="999" style="resize:none"></textarea>
+		</div>
+		</div> 		 
+		<div id="success"> </div> <!-- For success/fail messages -->
+		<button type="submit" class="btn btn-primary pull-right">Send</button><br />
+		</form>
+					</div>
+					<div class="col-md-6">
+						<div class="row">
+							<div class="col-md-6">
+								<h3 class="section-title">College Address</h3>
+								<div class="contact-info">
+									<h5>Address</h5>
+									<p>Baruipur jn. ,WB-700144</p>
+									
+									<h5>Email</h5>
+									<p>gmil12@gmail.com</p>
+									
+									<h5>Phone</h5>
+									<p>7903763387</p>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<h3 class="section-title">Timings</h3>
+								<div class="contact-info">
+									<h5>Tuesday- Saturday</h5>
+									<p>09:00 AM - 6:30 PM</p>
+									
+									<h5>Sunday</h5>
+									<p>Closed</p>
+									
+									<h5>Monday</h5>
+									<p>Closed</p>
+								</div>
+							</div>
+						</div>						
+					</div>
+				</div>
+			</div>
+	<!-- /container -->
+	<br/>
+	<br/>
+	
+	<center> <h3>College Location</h3>>
+	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3689.3533355205604!2d88.43875281495606!3d22.37803348528325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a026d0097533aed%3A0xe18407a46f2e97f6!2sGargi%20Memorial%20Institute%20of%20Technology!5e0!3m2!1sen!2sin!4v1614381959988!5m2!1sen!2sin" 
+	width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</center>
+
+	
+
+	<footer id="footer">
+		<div class="container">
+			<div class="social text-center">
+				<a href="#"><i class="fa fa-twitter"></i></a>
+				<a href="#"><i class="fa fa-facebook"></i></a>
+				<a href="#"><i class="fa fa-dribbble"></i></a>
+				<a href="#"><i class="fa fa-flickr"></i></a>
+				<a href="#"><i class="fa fa-github"></i></a>
+			</div>
+
+			<div class="clear"></div>
+			<!--CLEAR FLOATS-->
+		</div>
+		<div class="footer2">
+			<div class="container">
+				<div class="row">
+
+					<div class="col-md-6 panel">
+						<div class="panel-body">
+							<p class="simplenav">
+								<a href="/">Home</a> | 
+								<a href="/about">About</a> |
+								<a href="/courses">Courses</a> |
+								<a href="fees.html">Fees</a> |
+								<a href="/contact">Contact</a>
+							</p>
+						</div>
+					</div>
+
+					<div class="col-md-6 panel">
+						<div class="panel-body">
+							<p class="text-right">
+								Copyright &copy; 2019.  <a href="https://webthemez.com/free-bootstrap-templates/" target="_blank">Bootstrap Templates</a> by WebThemez.com
+							</p>
+						</div>
+					</div>
+
+				</div>
+				<!-- /row of panels -->
+			</div>
+		</div>
+	</footer>
+
+
+	<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+ <script src="{{ url_for('static', filename='contact/jqBootstrapValidation.js')}}"></script>
+ <script src="{{ url_for('static', filename='contact/contact_me.js')}}"></script>
+
+	<script src="{{ url_for('static', filename='assets/js/custom.js')}}"></script>
+
+	<!-- Google Maps -->
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+	<script src="{{ url_for('static', filename='assets/js/google-map.js')}}"></script>
+
+
+</body>
+</html>

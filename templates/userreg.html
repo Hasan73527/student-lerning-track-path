@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REGISTRATION</title>
+    <link rel="favicon" href="{{url_for('static', filename='assets/images/favicon.png')}}">
+    <link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+    <link rel="stylesheet" href="{{url_for('static', filename='assets/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='assets/css/font-awesome.min.css')}}">
+    <!-- Custom styles for our template -->
+    <link rel="stylesheet" href="{{url_for('static', filename='assets/css/bootstrap-theme.css')}}" media="screen">
+    <link rel="stylesheet" href="{{url_for('static', filename='assets/css/style.css')}}">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+	<script src="assets/js/html5shiv.js"></script>
+	<script src="assets/js/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-inverse">
+        <div class="container">
+            <div class="navbar-header">
+                <!-- Button for smallest screens -->
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+                <a class="navbar-brand" href="/">
+                    <img src="{{url_for('static', filename='assets/images/logo.png')}}" alt="Techro HTML5 template"></a>
+            </div>
+          </div>
+          <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav pull-right mainNav">
+              <li class="active"><a href="/">Home</a></li> 	
+              <li><a href="/userreg">registration</a></li>
+              <li><a href="/userlogin">Login</a></li>
+              <li><a href="/adminlogin">Admin</a></li>
+              <li><a href="/courses">Courses</a></li>
+              <li><a href="/contact">Contact</a></li>
+              <li><a href="/about">About</a></li>
+    
+            </ul>
+          </div>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </div>
+    <!-- /.navbar -->
+
+    <header id="head" class="secondary">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8">
+                    <center>
+                    <h1>REGISTRATION</h1>
+                </center>
+                </div>
+            </div>
+        </div>
+    </header>
+    <br />
+    <br />
+      <div class="row">
+        <div class="col-md-6 col-sm-8 mx-auto">
+          <div class="card">
+          
+            </div>
+            <div class="card-body" style="background-color: #eeefff">
+              <div class="mt-2 text-center">
+              <h3 style="color: rgb(42, 165, 114);">CREATE ACCOUNT </h3>
+            </div>
+            <div align = "center">
+              <h5 style="color:brown">
+                <b> {{ msg }} </b>
+            </h5>
+          </div>
+          <div class="mt-4 text-left">
+              <form action="/userreg" method="post">
+
+                <div class="mb-3">
+                  <label for="name" class="fw-bold text-primary">NAME</label>
+                  <input type="text" name="fullname" class="form-control" placeholder="Enter Your Full Name" required>
+                </div>
+
+                <div class="mb-3">
+                  <label for="email" class="fw-bold text-primary">EMAIL</label>
+                  <input type="email" name="email" class="form-control" placeholder="Enter Your Email" required>
+                </div>
+
+                <div class="mb-3">
+                  <label for="mobile" class="fw-bold text-primary">MOBILE NO</label>
+                  <input type="tel" name="mobile" class="form-control" placeholder="Enter Your Mobile" required>
+                </div>
+
+                <div class="mb-3">
+                  <label for="country" class="fw-bold text-primary">COUNTRY</label>
+                  &nbsp;&nbsp;&nbsp;
+                  <select name="country">
+                    <option value="INDIA">INDIA</option>
+                    <option value="USA">USA</option>
+                    <option value="UK">UK</option>
+                  </select>
+                </div>
+
+                <div class="mb-3">
+                  <label for="language" class="fw-bold text-primary">LANGUAGE Known</label>
+                  &nbsp;&nbsp;
+                  <input type="checkbox" checked name="english" value="English" />
+                  <span class="text-info">English</span> &nbsp;&nbsp;
+                  <input type="checkbox" name="bengali" value="Bengali" />
+                  <span class="text-info">Bengali</span> &nbsp;&nbsp;
+                  <input type="checkbox" name="hindi" value="Hindi" />
+                  <span class="text-info">Hindi</span>
+                </div>
+
+                <div class="mb-3">
+                  <label for="gender" class="fw-bold text-primary">GENDER</label>
+                  &nbsp;&nbsp;&nbsp;
+                  <input type="radio" name="gender" value="Male" />
+                  <span class="text-info">Male</span> &nbsp;&nbsp;
+                  <input type="radio" name="gender" value="Female" />
+                  <span class="text-info">Female</span>
+                </div>
+
+                <div class="mb-3">
+                  <label for="dob" class="fw-bold text-primary">DATE OF BIRTH</label>
+                  <input type="date" name="dob" class="form-control" max="2012-12-31">
+                </div>
+
+                <div class="mb-3">
+                  <label for="password" class="fw-bold text-primary">PASSWORD</label>
+                  <input type="password" name="password" class="form-control" placeholder="Enter password" required>
+                </div>
+
+                <div class="mb-3">
+                  <label for="address" class="fw-bold text-primary">ADDRESS</label>
+                  &nbsp;&nbsp;&nbsp;<br />
+                  <textarea name="address" placeholder="Write your Address Here" rows="4" cols="55"></textarea>
+                </div>
+
+                &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="submit" class="btn btn-primary" value="CREATE ACOUNT"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="reset" class="btn btn-dark" value="RESET FORM">
+              </form>
+            </div> <!-- Form tag div -->
+          </div> <!-- Card Body End -->
+        </div> <!-- Card End -->
+      </div> <!-- Col alignment end -->
+    </div> <!-- Row End -->
+  </div> <!-- Container End -->
+</body>
+
+</html>
